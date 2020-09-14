@@ -1,1 +1,1 @@
-# day-planner
+# day-planner: i really struggled with the change in Jquery, I feel like I was just getting a hang of Javascript, a little. I have a day planner that shows you the current time and day and clickable buttons that do not do anything but I feel I was getting close. I was not abel to get the days to be different colors depending on the time of day; but I believe I would have to work with intervals and compare the values of the time that it is currently and valuse that is given to that element. I am still really struggling but sadly this homework was an improvement.
