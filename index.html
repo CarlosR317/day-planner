@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+    <div id='time'></div>
+  </header>
+
+  <div class="container">
+    <h6>Time of Day</h6>
+<!-- I wonder if setting it up as a table instead of div would have helped solved some of my issues -->
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>9:00am</p>
+      </div>
+      <textarea id="9" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>10:00am</p>
+      </div>
+            <textarea id="10" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>11:00am</p>
+      </div>
+      <textarea id="11" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>12:00pm</p>
+      </div>
+      <textarea id="12" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>1:00pm</p>
+      </div>
+      <textarea id="13" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>2:00pm</p>
+      </div>
+      <textarea id="14" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>3:00pm</p>
+      </div>
+      <textarea id="15" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>4:00pm</p>
+      </div>
+      <textarea id="16" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+
+    <div class="row time-block past">
+      <div class="hour col-md-1">
+        <p>5:00pm</p>
+      </div>
+      <!-- could not figure out a way to actually save was user puts in -->
+      <!-- <input id="17" class="col-md-10"> -->
+      <textarea id="17" class="col-md-10"></textarea>
+      <button class="saveBtn col-md-1"></button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+  // I had been looking at different ways to save the text to local storage. Had a hard time getting it to save it. console.log does not show any errors but does not show anything
+    $(document).ready(function () {
+      var saveBtn = $('<button>');
+      var todoText = $('<textarea>').text("");
+     
+      saveBtn.attr('data-let', letters[enter]);
+      saveBtn.text(letters[enter]);
+      $('<textarea>').append(todoText);
+        $('<button>').append(saveBtn);
+
+     saveBtn.on("click", function (event) {
+      localStorage.setItem("entry", "task");
+        console.log(this.class);
+
+      });
+    });
+    
+// trying different ways to save the text
+
+// $(":button").click(function(event){
+//   var todoText = $("<textarea">).val("");
+
+//   if(event.which === ""){
+
+//   // $(this).val("");
+//   $("<textarea>").append($(todoText));
+// }
+// });
+
+
+// });
+
+//     if(event.which === ""){
+  //     var todoText = $(this).val();
+  //     $(this).val("");
+  //     $("<textarea>").append($(todoText));
+  //   }
+  // });
+
+
+  // });
+
+// var data = getData('')
+//     $('#saveBtn').on('click', function(){
+//        var save = $(this).attr('class')
+//     $('input[type="text"]').each(function(){    
+//         var id = $(this).attr('id');
+//         var value = $(this).val();
+//        localStorage.setItem(id, value);
+
+//     });   
+// });
+
+
+
+//     $(".saveBtn col-md-1").click(function() {
+//     var
+//     $(".saveBtn col-md-1").html();
+// });
+
+// }); 
+
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
